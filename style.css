@@ -24,6 +24,173 @@ body {
     font-family: 'Raleway', serif;
 }
 
+p.autor {
+    font-style: italic;
+    font-style: 0.6em;
+}
+
+
+.hlavička{
+    background-image: url(images/island-hlavicka.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin: 0.5px;
+    color: #f5f5f5;
+    text-align: center;
+}
+
+
+
+
+/* MENU */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+ul {
+    padding: 0 10px;
+    text-align: center;
+    list-style: none;
+    
+}
+li {
+    display: block; 
+    width: 100%;
+    border-bottom: dimgray solid 1px;
+}
+
+.menu a{
+    text-decoration-line: none;
+    color: dimgray;
+}
+
+
+
+
+/* OBSAH */
+h2 {
+    padding: 0 20px;
+}
+
+p {
+    padding: 10px 10px 10px 50px;
+}
+
+
+
+h2::after{
+    content: " ";
+    width: 150px;
+    height: 5px;
+    background-color: rgb(0, 100, 255);
+    display: block;
+    margin-top: 15px;
+}
+
+
+
+/* FOTOGALERIE */
+img {
+    max-width: 100%;
+   
+}
+
+.foto{
+    width: 500px;
+    display: block;
+    
+    
+}
+
+p.popisek{
+    color: dimgray;
+    text-align: center;
+    padding: 5px 0;
+    margin: 0 0;
+    font-size: 0.7rem;
+}
+
+
+.popisek a {
+    font-weight: bold;
+    color: dimgray;
+}
+
+/* PATICKA */
+p.paticka {
+    background: linear-gradient(180deg,lightgray, #f5f5f5 25%);
+    color: dimgray;
+    font-size: 0.8em;
+}
+
+.paticka a {
+    text-decoration:rgb(44, 44, 44);
+    color: dimgray;
+}
+
+@media (min-width: 500px) {
+
+/* MENU */
+.menu {
+    display: block;
+}   
+
+li {
+    float: left; 
+    width: 25%;
+    
+}
+
+.menu a{
+    font-size: 0.8em;
+}
+h2 {
+    padding: 0 50px;
+}
+
+.galerie{
+display: flex;
+flex-wrap: wrap;
+}
+
+.foto {
+    width: 50%;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.foto img{
+    width: 100%;
+    display: block;
+    transition: transform 1s ease 0s;
+}
+.foto .popisek{
+        background-color: rgba(0, 0, 0, 0.5);
+        color:ivory;
+        text-align: center;
+        padding: 5px 0;
+        position: absolute;
+        width: 100%;
+        transition: transform 1s ease 0s;
+    }
+.foto:hover img{
+        transform: scale(1.2);
+    }
+    .foto:hover .popisek{
+        transform: translate(0, -100%);
+    
+    }
+}
+@media (min-width: 1000px)
+
+
+/* HLAVICKA */
+
+
 
 /* MENU */
 
