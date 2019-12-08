@@ -29,6 +29,14 @@ p.autor {
     font-style: 0.6em;
 }
 
+.autor::before {
+    content:'';
+    display:block;
+    width: 20%; 
+    height:100%;
+    border-bottom: 2px solid white;
+    margin: 0 auto;
+}
 
 .hlavička{
     background-image: url(images/island-hlavicka.jpg);
@@ -38,6 +46,7 @@ p.autor {
     margin: 0.5px;
     color: #f5f5f5;
     text-align: center;
+    padding-bottom: 15px;
 }
 
 
@@ -63,6 +72,7 @@ li {
 }
 
 .menu a{
+    text-transform: uppercase;
     text-decoration-line: none;
     color: dimgray;
 }
@@ -76,7 +86,8 @@ h2 {
 }
 
 p {
-    padding: 10px 10px 10px 50px;
+    padding: 10px 30px;
+    margin: 0;
 }
 
 
@@ -136,20 +147,20 @@ p.paticka {
 /* MENU */
 .menu {
     display: block;
+    margin-left: -15em;
 }   
 
 li {
     float: left; 
     width: 25%;
-    
+   font-size: 0.8em;
 }
 
-.menu a{
-    font-size: 0.8em;
-}
+
 h2 {
     padding: 0 50px;
 }
+
 
 .galerie{
 display: flex;
@@ -185,26 +196,81 @@ flex-wrap: wrap;
     
     }
 }
-@media (min-width: 1000px)
-
+@media (min-width: 1000px){
 
 /* HLAVICKA */
+p.autor {
+    padding-left: 300px;
+}
+
+.perex{
+    width: 960px;
+    margin: 0 auto;
+
+}
+
+.sloupec{
+    transform: translate(0, -25px);
+    width: 960px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3); 
+    background: white;
+    top: 360px;  
+    padding-top: 10px;        
+    margin: 0 auto;
+    display: block;
+}
+
+
 
 
 
 /* MENU */
+.menu {
+    float: left;
+    display: block;
+    text-align: left;
+    padding: 10px 50px;
+    width: 30%;
+}
+ul.menu{
+    margin: 0;
+    padding: 30px 15px;
+}
 
-
+li{
+    width: 100%;
+    padding: 5px;
+}
+.menu a{
+    font-size: 1em;
+}
 
 
 /* OBSAH */
 
 
 
+p {
+    width: 75%;
+}
+
+.cast1{
+    padding-left: 25%;
+}
+
+.cast3{
+    padding-left: 25%;
+}
 
 /* FOTOGALERIE */
+.foto {
+    width: 33.33%;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
 
 
 
 
-/* PATICKA */
+/* PATICKA */}
