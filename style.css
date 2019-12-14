@@ -1,12 +1,14 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
-*, :after, :before { box-sizing: border-box; }
+
+*, :after, :before {
+    box-sizing: border-box;
+}
 
 /*
  BARVY
  pozadi     #f5f5f5
  Jedeme retro cernobile, dnes barvy nepotrebujeme.
 */
-
 
 body {
     margin: 0;
@@ -16,7 +18,6 @@ body {
     font-size: 16px;
     line-height: 1.6;
 }
-
 
 /* HLAVICKA */
 
@@ -30,16 +31,16 @@ p.autor {
 }
 
 .autor::before {
-    content:'';
-    display:block;
-    width: 20%; 
-    height:100%;
+    content: '';
+    display: block;
+    width: 20%;
+    height: 100%;
     border-bottom: 2px solid white;
     margin: 0 auto;
 }
 
-.hlavička{
-    background-image: url(images/island-hlavicka.jpg);
+.hlavička {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/island-hlavicka.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -49,50 +50,43 @@ p.autor {
     padding-bottom: 15px;
 }
 
-
-
-
 /* MENU */
+
 .menu {
     display: flex;
     flex-wrap: wrap;
-
 }
 
 ul {
     padding: 0 10px;
     text-align: center;
     list-style: none;
-    
 }
+
 li {
-    display: block; 
+    display: block;
     width: 100%;
     border-bottom: dimgray solid 1px;
 }
 
-.menu a{
+.menu a {
     text-transform: uppercase;
     text-decoration-line: none;
     color: dimgray;
 }
 
-
-
-
 /* OBSAH */
+
 h2 {
     padding: 0 20px;
 }
 
 p {
-    padding: 10px 30px;
+    padding: 10px;
     margin: 0;
 }
 
-
-
-h2::after{
+h2::after {
     content: " ";
     width: 150px;
     height: 5px;
@@ -101,22 +95,18 @@ h2::after{
     margin-top: 15px;
 }
 
-
-
 /* FOTOGALERIE */
+
 img {
     max-width: 100%;
-   
 }
 
-.foto{
-    width: 500px;
+.foto {
+    width: 100%;
     display: block;
-    
-    
 }
 
-p.popisek{
+p.popisek {
     color: dimgray;
     text-align: center;
     padding: 5px 0;
@@ -124,153 +114,133 @@ p.popisek{
     font-size: 0.7rem;
 }
 
-
 .popisek a {
     font-weight: bold;
     color: dimgray;
 }
 
 /* PATICKA */
+
 p.paticka {
-    background: linear-gradient(180deg,lightgray, #f5f5f5 25%);
+    background: linear-gradient(180deg, lightgray, #f5f5f5 25%);
     color: dimgray;
     font-size: 0.8em;
 }
 
 .paticka a {
-    text-decoration:rgb(44, 44, 44);
+    text-decoration: rgb(44, 44, 44);
     color: dimgray;
 }
 
 @media (min-width: 500px) {
-
-/* MENU */
-.menu {
-    display: block;
-    margin-left: -15em;
-}   
-
-li {
-    float: left; 
-    width: 25%;
-   font-size: 0.8em;
-}
-
-
-h2 {
-    padding: 0 50px;
-}
-
-
-.galerie{
-display: flex;
-flex-wrap: wrap;
-}
-
-.foto {
-    width: 50%;
-    float: left;
-    position: relative;
-    overflow: hidden;
-}
-
-.foto img{
-    width: 100%;
-    display: block;
-    transition: transform 1s ease 0s;
-}
-.foto .popisek{
+    /* MENU */
+    .menu {
+        display: block;
+        margin-left: -15em;
+    }
+    li {
+        float: left;
+        width: 25%;
+        font-size: 0.8em;
+    }
+    h2 {
+        padding: 30px 0 0 30px;
+    }
+    .galerie {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .foto {
+        width: 50%;
+        float: left;
+        position: relative;
+        overflow: hidden;
+    }
+    .foto img {
+        width: 100%;
+        display: block;
+        transition: transform 1s ease 0s;
+    }
+    .foto .popisek {
         background-color: rgba(0, 0, 0, 0.5);
-        color:ivory;
+        color: ivory;
         text-align: center;
         padding: 5px 0;
         position: absolute;
         width: 100%;
         transition: transform 1s ease 0s;
     }
-.foto:hover img{
+    .foto:hover img {
         transform: scale(1.2);
     }
-    .foto:hover .popisek{
+    .foto:hover .popisek {
         transform: translate(0, -100%);
-    
     }
 }
-@media (min-width: 1000px){
 
-/* HLAVICKA */
-p.autor {
-    padding-left: 300px;
+@media (min-width: 1000px) {
+    /* HLAVICKA */
+    p.autor {
+        padding-left: 10px;
+    }
+    .perex {
+        width: 960px;
+        margin: 0 auto;
+    }
+    .sloupec {
+        transform: translate(0, -25px);
+        width: 960px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+        background: white;
+        top: 360px;
+        padding-top: 10px;
+        margin: 0 auto;
+        display: block;
+    }
+    /* MENU */
+    .menu {
+        float: left;
+        display: block;
+        text-align: left;
+        padding: 10px 50px;
+        width: 25%;
+    }
+    ul.menu {
+        margin: 0;
+        padding: 30px 15px;
+    }
+    li {
+        width: 100%;
+        padding: 5px;
+    }
+    .menu a {
+        font-size: 1em;
+    }
+    /* OBSAH */
+    p {
+        width: 100%;
+    }
+    .cast1 {
+        padding: 0 0 0 250px;
+    }
+    .cast2 {
+        padding-right: 250px;
+    }
+    .cast3 {
+        padding-left: 250px;
+    }
+    .cast3 a {
+        text-align: right;
+        padding-top: -30px;
+        position: relative;
+    }
+    /* nevím proč tohle nefunguje :( */
+    /* FOTOGALERIE */
+    .foto {
+        width: 33.33%;
+        float: left;
+        position: relative;
+        overflow: hidden;
+    }
+    /* PATICKA */
 }
-
-.perex{
-    width: 960px;
-    margin: 0 auto;
-
-}
-
-.sloupec{
-    transform: translate(0, -25px);
-    width: 960px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3); 
-    background: white;
-    top: 360px;  
-    padding-top: 10px;        
-    margin: 0 auto;
-    display: block;
-}
-
-
-
-
-
-/* MENU */
-.menu {
-    float: left;
-    display: block;
-    text-align: left;
-    padding: 10px 50px;
-    width: 30%;
-}
-ul.menu{
-    margin: 0;
-    padding: 30px 15px;
-}
-
-li{
-    width: 100%;
-    padding: 5px;
-}
-.menu a{
-    font-size: 1em;
-}
-
-
-/* OBSAH */
-
-
-
-p {
-    width: 75%;
-}
-
-.cast1{
-    padding-left: 25%;
-}
-
-.cast3{
-    padding-left: 25%;
-}
-
-/* FOTOGALERIE */
-.foto {
-    width: 33.33%;
-    float: left;
-    position: relative;
-    overflow: hidden;
-}
-
-
-
-
-/* PATICKA */}
