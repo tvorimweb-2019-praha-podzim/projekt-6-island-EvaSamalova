@@ -229,7 +229,7 @@ p.paticka {
     .cast3 {
         padding-left: 250px;
     }
-    .cast3 a {
+    div.cast3 p.popisek {
         text-align: right;
         padding-top: -30px;
         position: relative;
